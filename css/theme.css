@@ -1,0 +1,121 @@
+/* ========================================
+   CSS Variables - Theme System
+   ======================================== */
+
+/* Light Theme (default) */
+:root {
+  /* Color Palette - Clean & Modern */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --bg-tertiary: #f1f3f4;
+  --bg-code: #f6f8fa;
+
+  /* Text Colors */
+  --text-primary: #1a1a1a;
+  --text-secondary: #6c757d;
+  --text-muted: #9ca3af;
+
+  /* Accent Colors - Blue/Cyan */
+  --accent-primary: #2563eb;
+  --accent-secondary: #06b6d4;
+  --accent-gradient: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+
+  /* Border & Shadows */
+  --border-color: #e5e7eb;
+  --border-light: #f0f0f0;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+  /* Typography */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC",
+               "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
+  --font-mono: "Consolas", "Monaco", "Courier New", "SF Mono", monospace;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* Transitions */
+  --transition-fast: 150ms ease;
+  --transition-normal: 300ms ease;
+  --transition-slow: 500ms ease;
+
+  /* Code Block Accent */
+  --code-accent: #2563eb;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --bg-primary: #0d1117;
+  --bg-secondary: #161b22;
+  --bg-tertiary: #21262d;
+  --bg-code: #1c2128;
+
+  --text-primary: #e6edf3;
+  --text-secondary: #9198a1;
+  --text-muted: #6e7681;
+
+  --accent-primary: #3b82f6;
+  --accent-secondary: #22d3ee;
+
+  --border-color: #30363d;
+  --border-light: #21262d;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+
+  --code-accent: #3b82f6;
+}
+
+/* ========================================
+   CSS Custom Properties for Components
+   ======================================== */
+
+/* Header */
+--header-bg: var(--bg-primary);
+--header-border: var(--border-color);
+
+/* Sidebar */
+--sidebar-bg: var(--bg-secondary);
+--sidebar-hover: var(--bg-tertiary);
+
+/* Cards */
+--card-bg: var(--bg-primary);
+--card-border: var(--border-color);
+--card-shadow: var(--shadow-md);
+
+/* Tags */
+--tag-bg: var(--bg-tertiary);
+--tag-text: var(--text-secondary);
+--tag-hover-bg: var(--accent-primary);
+--tag-hover-text: #ffffff;
+
+/* Links */
+--link-color: var(--accent-primary);
+--link-hover: var(--accent-secondary);
+
+/* Search */
+--search-bg: var(--bg-secondary);
+--search-border: var(--border-color);
+--search-text: var(--text-primary);
+--search-placeholder: var(--text-muted);
+
+/* Code */
+--code-bg: var(--bg-code);
+--code-text: var(--text-primary);
+
+/* Selection */
+--selection-bg: var(--accent-primary);
+--selection-text: #ffffff;

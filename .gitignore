@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Generated files
+*.log
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# Local development
+*.local
+
+# Generated data (optional, uncomment if you want to ignore posts.json)
+# data/posts.json
+
+# Backup files
+*.bak
+*.backup

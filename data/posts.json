@@ -1,0 +1,51 @@
+{
+  "posts": [
+    {
+      "id": "triton-basics",
+      "title": "Triton 入门指南",
+      "date": "2024-01-15",
+      "tags": ["triton", "tutorial", "gpu"],
+      "category": "基础教程",
+      "description": "Triton 编程语言的基础概念、语法和使用方法，帮助你快速上手 GPU 编程。",
+      "file": "posts/triton-basics.md",
+      "readTime": 8
+    },
+    {
+      "id": "cuda-optimization",
+      "title": "CUDA 内存优化实战",
+      "date": "2024-01-20",
+      "tags": ["cuda", "optimization", "memory"],
+      "category": "性能优化",
+      "description": "深入理解 CUDA 内存层次结构，掌握共享内存、常量内存和全局内存的优化技巧。",
+      "file": "posts/cuda-optimization.md",
+      "readTime": 12
+    },
+    {
+      "id": "gpu-architecture",
+      "title": "GPU 架构浅析",
+      "date": "2024-02-01",
+      "tags": ["gpu", "hardware", "architecture"],
+      "category": "硬件基础",
+      "description": "从硬件层面理解 GPU 的工作原理，包括流式多处理器、线程束和内存层次结构。",
+      "file": "posts/gpu-architecture.md",
+      "readTime": 10
+    }
+  ],
+  "tags": [
+    "triton",
+    "cuda",
+    "gpu",
+    "optimization",
+    "tutorial",
+    "memory",
+    "hardware",
+    "architecture"
+  ],
+  "categories": [
+    "基础教程",
+    "性能优化",
+    "硬件基础",
+    "实战案例",
+    "工具配置"
+  ]
+}
