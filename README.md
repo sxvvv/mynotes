@@ -1,6 +1,6 @@
-# HPC/Triton 技术笔记
+# mynotes 个人技术笔记
 
-一个简约科技风格的个人技术笔记网站，用于分享高性能计算（HPC）、Triton 编程和 GPU 优化的学习笔记。
+一个简约科技风格的个人技术笔记网站，用于整理和分享你的技术学习笔记（当前示例内容以 HPC / Triton / GPU 为主，你可以按需替换为自己的主题）。
 
 ## 特性
 
@@ -79,7 +79,7 @@ description: 文章简介（用于搜索和预览）
 ## 项目结构
 
 ```
-triton/
+mynotes/
 ├── index.html              # 主页面（SPA）
 ├── css/
 │   ├── main.css           # 主样式
@@ -105,10 +105,12 @@ triton/
 
 ## 上传到 GitHub 并部署（个人笔记网站）
 
-### 第一步：在 GitHub 创建仓库
+本仓库已配置远程：**https://github.com/sxvvv/mynotes**。推送成功后，笔记网站地址为：**https://sxvvv.github.io/mynotes/**。
+
+### 第一步：在 GitHub 创建仓库（若尚未创建）
 
 1. 登录 [GitHub](https://github.com)，点击右上角 **+** → **New repository**
-2. 仓库名可填 `triton` 或任意名称（如 `notes`）
+2. 仓库名可填 `mynotes` 或任意名称
 3. 选择 **Public**，不勾选 “Add a README”
 4. 点击 **Create repository**
 
@@ -146,8 +148,8 @@ git push -u origin main
 
 ### 第四步：访问你的笔记网站
 
-- 若仓库名为 `triton`，地址为：**https://你的用户名.github.io/triton/**
-- 若仓库名为 `notes`，地址为：**https://你的用户名.github.io/notes/**
+- 本项目地址：**https://sxvvv.github.io/mynotes/**
+- 若你以后新建其他仓库，访问规则为：`https://你的用户名.github.io/仓库名/`
 
 之后每次修改笔记，只需在本地执行：
 
@@ -206,4 +208,4 @@ MIT License - Feel free to use and modify.
 
 ## 作者
 
-Your Name - [GitHub](https://github.com/yourusername)
+sxvvv - [GitHub](https://github.com/sxvvv)
