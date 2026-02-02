@@ -9,8 +9,22 @@ class BlogApp {
     this.categories = [];
     this.tags = [];
     this.currentPost = null;
+    /** GitHub Pages 子路径，如 /triton，本地为空字符串 */
+    this.basePath = this.getBasePath();
 
     this.init();
+  }
+
+  /**
+   * 获取站点 base 路径，兼容 GitHub Pages 项目页（如 username.github.io/triton/）
+   * 仅当 pathname 形如 /repo/ 或 /repo/index.html 时返回 /repo，否则返回空（本地或根站）
+   */
+  getBasePath() {
+    if (typeof location === 'undefined' || !location.pathname) return '';
+    const path = location.pathname.replace(/^\/|\/$/g, '').split('/');
+    if (path.length === 1 && path[0] && !path[0].includes('.')) return '/' + path[0];
+    if (path.length === 2 && path[0] && path[1].toLowerCase() === 'index.html') return '/' + path[0];
+    return '';
   }
 
   /**
@@ -43,7 +57,8 @@ class BlogApp {
    * Load posts metadata from JSON
    */
   async loadPostsData() {
-    const response = await fetch('data/posts.json');
+    const url = this.basePath ? `${this.basePath}/data/posts.json` : 'data/posts.json';
+    const response = await fetch(url);
     const data = await response.json();
 
     this.posts = data.posts || [];
@@ -247,8 +262,9 @@ class BlogApp {
     content.innerHTML = '<div class="loading"><div class="spinner"></div>加载中...</div>';
 
     try {
-      // Fetch markdown content
-      const response = await fetch(post.file);
+      // Fetch markdown content（兼容 GitHub Pages 子路径）
+      const fileUrl = this.basePath ? `${this.basePath}/${post.file}` : post.file;
+      const response = await fetch(fileUrl);
       const markdown = await response.text();
 
       // Render markdown to HTML

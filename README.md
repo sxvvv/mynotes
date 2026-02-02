@@ -103,25 +103,67 @@ triton/
 └── README.md
 ```
 
-## 部署到 GitHub Pages
+## 上传到 GitHub 并部署（个人笔记网站）
 
-1. 创建 GitHub 仓库
-2. 推送代码：
+### 第一步：在 GitHub 创建仓库
+
+1. 登录 [GitHub](https://github.com)，点击右上角 **+** → **New repository**
+2. 仓库名可填 `triton` 或任意名称（如 `notes`）
+3. 选择 **Public**，不勾选 “Add a README”
+4. 点击 **Create repository**
+
+### 第二步：在本地推送代码（上传）
+
+在项目目录打开终端，执行：
 
 ```bash
+# 若尚未初始化 Git
+git init
+
+# 添加所有文件
 git add .
-git commit -m "Initial commit"
+
+# 提交
+git commit -m "Initial commit: 个人笔记网站"
+
+# 添加远程仓库（把 yourusername 和 triton 换成你的用户名和仓库名）
 git remote add origin https://github.com/yourusername/triton.git
+
+# 推送到 main 分支（若本地是 master，可先执行：git branch -M main）
+git branch -M main
 git push -u origin main
 ```
 
-3. 启用 GitHub Pages：
-   - 进入仓库 Settings
-   - 找到 Pages 选项
-   - 选择 `main` 分支作为来源
-   - 保存设置
+若推送时要求登录，请使用 **Personal Access Token** 或 **SSH**，不要用账号密码（GitHub 已不支持密码推送）。
 
-4. 访问 `https://yourusername.github.io/triton/`
+### 第三步：开启 GitHub Pages
+
+1. 打开你的仓库页面，点击 **Settings**
+2. 左侧找到 **Pages**
+3. 在 **Source** 里选择 **Deploy from a branch**
+4. **Branch** 选 `main`，文件夹选 **/ (root)**，点 **Save**
+5. 等待 1～2 分钟，页面会显示站点地址
+
+### 第四步：访问你的笔记网站
+
+- 若仓库名为 `triton`，地址为：**https://你的用户名.github.io/triton/**
+- 若仓库名为 `notes`，地址为：**https://你的用户名.github.io/notes/**
+
+之后每次修改笔记，只需在本地执行：
+
+```bash
+git add .
+git commit -m "更新笔记"
+git push
+```
+
+GitHub Pages 会自动重新部署，几分钟后刷新网站即可看到更新。
+
+### 常见问题
+
+- **推送时报错（无法上传）**：GitHub 已不支持账号密码推送。请使用 [Personal Access Token](https://github.com/settings/tokens)（在 GitHub → Settings → Developer settings 中创建），或配置 [SSH 密钥](https://docs.github.com/cn/authentication/connecting-to-github-with-ssh)。
+- **打开网站白屏/加载失败**：确认 GitHub Pages 已开启，且访问地址为 `https://你的用户名.github.io/仓库名/`（末尾要有斜杠）。若仍失败，打开浏览器开发者工具（F12）查看 Console 是否有 404 等报错。
+- **想用根域名**：若仓库名为 `你的用户名.github.io`，则站点地址为 `https://你的用户名.github.io/`，无需子路径。
 
 ## 自定义
 

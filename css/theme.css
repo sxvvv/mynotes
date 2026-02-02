@@ -1,38 +1,40 @@
 /* ========================================
    CSS Variables - Theme System
+   个人笔记风格：纸感浅色 + 柔和深色
    ======================================== */
 
-/* Light Theme (default) */
+/* Light Theme - 纸感暖白 */
 :root {
-  /* Color Palette - Clean & Modern */
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8f9fa;
-  --bg-tertiary: #f1f3f4;
-  --bg-code: #f6f8fa;
+  /* 背景 - 略带暖色的白/灰 */
+  --bg-primary: #fafaf9;
+  --bg-secondary: #f5f5f4;
+  --bg-tertiary: #e7e5e4;
+  --bg-code: #f4f4f5;
 
-  /* Text Colors */
-  --text-primary: #1a1a1a;
-  --text-secondary: #6c757d;
-  --text-muted: #9ca3af;
+  /* 文字 */
+  --text-primary: #1c1917;
+  --text-secondary: #57534e;
+  --text-muted: #a8a29e;
 
-  /* Accent Colors - Blue/Cyan */
-  --accent-primary: #2563eb;
-  --accent-secondary: #06b6d4;
-  --accent-gradient: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+  /* 主色 - 墨绿/青，偏沉稳 */
+  --accent-primary: #0d9488;
+  --accent-secondary: #0f766e;
+  --accent-gradient: linear-gradient(135deg, #0d9488 0%, #0f766e 100%);
 
-  /* Border & Shadows */
-  --border-color: #e5e7eb;
-  --border-light: #f0f0f0;
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  /* 边框与阴影 */
+  --border-color: #e7e5e4;
+  --border-light: #f5f5f4;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.08);
 
-  /* Typography */
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC",
-               "Microsoft YaHei", "PingFang SC", "Helvetica Neue", sans-serif;
-  --font-mono: "Consolas", "Monaco", "Courier New", "SF Mono", monospace;
+  /* 字体 */
+  --font-sans: "Noto Sans SC", -apple-system, BlinkMacSystemFont, "Segoe UI",
+               "Microsoft YaHei", "PingFang SC", sans-serif;
+  --font-serif: "Noto Serif SC", "Source Serif 4", Georgia, serif;
+  --font-mono: "JetBrains Mono", "Fira Code", Consolas, Monaco, monospace;
 
-  /* Spacing */
+  /* 间距 */
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
@@ -40,82 +42,81 @@
   --spacing-xl: 2rem;
   --spacing-2xl: 3rem;
 
-  /* Border Radius */
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
+  /* 圆角 */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
 
-  /* Transitions */
+  /* 动效 */
   --transition-fast: 150ms ease;
-  --transition-normal: 300ms ease;
-  --transition-slow: 500ms ease;
+  --transition-normal: 280ms ease;
+  --transition-slow: 400ms ease;
 
-  /* Code Block Accent */
-  --code-accent: #2563eb;
+  /* 代码块强调色 */
+  --code-accent: #0d9488;
+
+  /* 组件用变量 */
+  --header-bg: var(--bg-primary);
+  --header-border: var(--border-color);
+  --sidebar-bg: var(--bg-secondary);
+  --sidebar-hover: var(--bg-tertiary);
+  --card-bg: #ffffff;
+  --card-border: var(--border-color);
+  --card-shadow: var(--shadow-md);
+  --tag-bg: var(--bg-tertiary);
+  --tag-text: var(--text-secondary);
+  --tag-hover-bg: var(--accent-primary);
+  --tag-hover-text: #ffffff;
+  --link-color: var(--accent-primary);
+  --link-hover: var(--accent-secondary);
+  --search-bg: var(--bg-secondary);
+  --search-border: var(--border-color);
+  --search-text: var(--text-primary);
+  --search-placeholder: var(--text-muted);
+  --selection-bg: var(--accent-primary);
+  --selection-text: #ffffff;
 }
 
-/* Dark Theme */
+/* Dark Theme - 柔和深色 */
 [data-theme="dark"] {
-  --bg-primary: #0d1117;
-  --bg-secondary: #161b22;
-  --bg-tertiary: #21262d;
-  --bg-code: #1c2128;
+  --bg-primary: #1c1917;
+  --bg-secondary: #292524;
+  --bg-tertiary: #44403c;
+  --bg-code: #292524;
 
-  --text-primary: #e6edf3;
-  --text-secondary: #9198a1;
-  --text-muted: #6e7681;
+  --text-primary: #fafaf9;
+  --text-secondary: #a8a29e;
+  --text-muted: #78716c;
 
-  --accent-primary: #3b82f6;
-  --accent-secondary: #22d3ee;
+  --accent-primary: #2dd4bf;
+  --accent-secondary: #5eead4;
+  --accent-gradient: linear-gradient(135deg, #2dd4bf 0%, #5eead4 100%);
 
-  --border-color: #30363d;
-  --border-light: #21262d;
+  --border-color: #44403c;
+  --border-light: #292524;
 
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 12px 28px rgba(0, 0, 0, 0.5);
 
-  --code-accent: #3b82f6;
+  --code-accent: #2dd4bf;
+
+  --header-bg: var(--bg-primary);
+  --sidebar-bg: var(--bg-secondary);
+  --sidebar-hover: var(--bg-tertiary);
+  --card-bg: #292524;
+  --card-border: var(--border-color);
+  --tag-bg: var(--bg-tertiary);
+  --tag-text: var(--text-secondary);
+  --tag-hover-bg: var(--accent-primary);
+  --tag-hover-text: #1c1917;
+  --link-color: var(--accent-primary);
+  --link-hover: var(--accent-secondary);
+  --search-bg: var(--bg-secondary);
+  --search-border: var(--border-color);
+  --search-text: var(--text-primary);
+  --search-placeholder: var(--text-muted);
+  --selection-bg: var(--accent-primary);
+  --selection-text: #1c1917;
 }
-
-/* ========================================
-   CSS Custom Properties for Components
-   ======================================== */
-
-/* Header */
---header-bg: var(--bg-primary);
---header-border: var(--border-color);
-
-/* Sidebar */
---sidebar-bg: var(--bg-secondary);
---sidebar-hover: var(--bg-tertiary);
-
-/* Cards */
---card-bg: var(--bg-primary);
---card-border: var(--border-color);
---card-shadow: var(--shadow-md);
-
-/* Tags */
---tag-bg: var(--bg-tertiary);
---tag-text: var(--text-secondary);
---tag-hover-bg: var(--accent-primary);
---tag-hover-text: #ffffff;
-
-/* Links */
---link-color: var(--accent-primary);
---link-hover: var(--accent-secondary);
-
-/* Search */
---search-bg: var(--bg-secondary);
---search-border: var(--border-color);
---search-text: var(--text-primary);
---search-placeholder: var(--text-muted);
-
-/* Code */
---code-bg: var(--bg-code);
---code-text: var(--text-primary);
-
-/* Selection */
---selection-bg: var(--accent-primary);
---selection-text: #ffffff;
